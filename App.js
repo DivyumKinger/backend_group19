@@ -1,11 +1,13 @@
-const express = require('express')
-const app = express()
-const port = 4000
+import express from "express";
 
-app.get('/', (req, res) => {
-    res.send('Hello World! Welcome to EC2 Environment')
-})
+const app = express();
+const PORT = 4000;
 
-app.listen(port, () => {
-    console.log(`backend is running on port ${port}`)
-})
+// Example route
+app.get("/", (req, res) => {
+  res.send("Backend running on port 4000 🚀");
+});
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`✅ Backend running at http://0.0.0.0:${PORT}`);
+});
